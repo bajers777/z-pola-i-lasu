@@ -1,8 +1,8 @@
 .navbar {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
+    // display: flex;
+    // flex-flow: row nowrap;
+    // align-items: center;
+    // justify-content: space-between;
     height: 100px;
     background-color: rgb(176, 175, 250);
 
@@ -14,4 +14,13 @@
         color: #f1e4e4;
         border: 3px solid white;
     }
+}
+
+.hero-container {
+    height: 100vh;
+}
+
+
+.test {
+    border: 3px solid black;
 }
