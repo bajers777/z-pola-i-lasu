@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background-color: rgb(176, 175, 250);
+
+    img {
+        width: 150px;
+    }
+
+    .cart {
+        color: #f1e4e4;
+        border: 3px solid white;
+    }
+}
