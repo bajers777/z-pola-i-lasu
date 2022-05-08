@@ -1,7 +1,7 @@
 import React from 'react';
 //assets
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 const Cart = () => {
     return (
