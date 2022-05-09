@@ -1,0 +1,47 @@
+.store__item {
+    padding: 2rem;
+
+    .card {
+        height: 25rem;
+
+        &__img {
+            display: flex;
+            height: 65%;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.1);
+
+                img {
+                    opacity: 0.7;
+                }
+
+                .btn {
+                    opacity: 1;
+                }
+            }
+
+            img {
+                display: block;
+                transition: .1s ease-in;
+            }
+
+            .btn {
+                position: absolute;
+                left: 50%;
+                top: 25%;
+                transform: translate(-50%, 50%);
+                width: 90%;
+                height: 15%;
+                transition: .1s ease-in;
+                opacity: 0;
+            }
+
+
+        }
+
+        &-body {
+            height: 35%;
+
+        }
+    }
+}
