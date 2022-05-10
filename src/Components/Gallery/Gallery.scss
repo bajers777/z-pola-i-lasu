@@ -1,0 +1,25 @@
+.gallery {
+    height: 85vh;
+
+    &__slider {
+        height: 70%;
+        background-color: gray;
+
+        .carousel-inner {
+            height: 100%;
+        }
+
+        &--item {
+            padding: 0 10rem;
+        }
+    }
+
+    &__images {
+        height: 30%;
+        background-color: rgb(118, 46, 201);
+
+        img {
+            width: 100%;
+        }
+    }
+}

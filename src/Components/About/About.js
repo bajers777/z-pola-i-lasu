@@ -13,6 +13,20 @@ const About = () => {
     return (
         <section className='about'>
             <Container fluid>
+                <Row className='my-5'>
+                    <Col className='d-flex flex-column justify-content-center align-items-center'>
+                        <h1>
+                            Z Pola i Lasu
+                        </h1>
+                        <h2>
+                            Ekologiczna plantacja i naturalne domowe przetwory
+                        </h2>
+                        <p className='text-center' >
+                            Z POLA I LASU powstało z zamiłowania do tego co zdrowe i smaczne. Nasza plantacja znajduje się w Kazimierskim Parku Krajobrazowym. Na tych malowniczych terenach, wśród wąwozów lessowych, prowadzimy rodzinne gospodarstwo ekologiczne.
+                        </p>
+                    </Col>
+                </Row>
+
                 <Row className='mx-5'>
                     <Col sm={5} className='d-flex flex-column justify-content-center align-items-stretch'>
                         <p className='d-flex flex-column text-end'>
