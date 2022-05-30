@@ -1,5 +1,7 @@
 .gallery {
     height: 85vh;
+    overflow: hidden;
+    padding: 0;
 
     &__slider {
         height: 70%;
@@ -14,12 +16,63 @@
         }
     }
 
+    &__container {
+        position: relative;
+        height: 100%;
+
+        // width: 200vw;
+    }
+
     &__images {
+        display: flex;
+        flex-flow: row nowrap;
+        // width: 100%;
         height: 30%;
-        background-color: rgb(118, 46, 201);
+        overflow: hidden;
+        position: absolute;
+        left: 0px;
 
         img {
-            width: 100%;
+            height: 100%;
         }
+
+    }
+
+    &__item {
+        position: relative;
+        cursor: pointer;
+        height: 100%;
+        width: 300px;
+
+        &--icon {
+            opacity: 0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: .2s ease-in-out;
+
+        }
+
+
+
+        &:hover {
+            opacity: .6;
+
+            span {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.img-modal {
+    .modal-content {
+        background-color: transparent;
+        border-style: none;
+    }
+
+    .modal-header {
+        border-style: none;
     }
 }

@@ -12,9 +12,7 @@ const Gallery = () => {
             <Row className='gallery__slider d-flex justify-content-center'>
                 <Slider />
             </Row>
-            <Row className='gallery__images ' sm={12}>
-                <Images />
-            </Row>
+            <Images />
         </Container>
     )
 }
