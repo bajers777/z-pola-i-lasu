@@ -1,0 +1,25 @@
+footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background-image: url('../../Assets/Images/slider-bg-vert.png');
+    background-repeat: no-repeat;
+    background-color: #95d5b2;
+
+    .footer__contact {
+        display: flex;
+        flex-flow: row;
+
+        img {
+            width: 250px;
+            height: 150px;
+        }
+
+        ul {
+            list-style: none;
+        }
+    }
+
+}

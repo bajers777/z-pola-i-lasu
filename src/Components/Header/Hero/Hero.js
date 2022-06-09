@@ -29,7 +29,7 @@ const Hero = () => {
                     <source src={HeroBg} type='video/mp4' />
 
                 </video>
-                <Row>
+                <Row className='hero-container__text'>
                     <Col className='d-flex flex-column align-items-center'>
                         <b style={bHeaderStyle}>
                             Z Pola i Lasu

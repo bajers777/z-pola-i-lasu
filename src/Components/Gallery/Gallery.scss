@@ -1,11 +1,15 @@
 .gallery {
     height: 85vh;
     overflow: hidden;
-    padding: 0;
 
     &__slider {
         height: 70%;
-        background-color: gray;
+        background-image: url('../../Assets/Images/natural-product.png');
+        background-repeat: no-repeat;
+        background-size: 300px;
+        background-position: bottom -25% left;
+        background-color: #95D5B2;
+        color: #081C15;
 
         .carousel-inner {
             height: 100%;
@@ -57,7 +61,7 @@
 
 
         &:hover {
-            opacity: .6;
+            opacity: .8;
 
             span {
                 opacity: 1;
