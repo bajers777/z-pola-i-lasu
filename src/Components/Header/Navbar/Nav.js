@@ -10,20 +10,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { brands, solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 const Nav = () => {
+    const clientWidth = document.body.clientWidth;
+
     return (
         <Navbar className='navbar'>
             <Container fluid>
                 <Col className='navbar__brand' sm='2'>
-                    <NavbarBrand>
-                        <img src={Logo} alt="" />
-                    </NavbarBrand>
                 </Col>
 
                 <Col md='4'>
-                    <Contact />
+                    <Contact clientWidth={clientWidth} />
                 </Col>
-                <Col className='cart' sm='2'>
-                    <Cart />
+                <Col className='cart' md='2'>
+                    <Cart clientWidth={clientWidth} />
                 </Col>
             </Container>
         </Navbar>

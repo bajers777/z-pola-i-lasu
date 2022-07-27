@@ -1,0 +1,14 @@
+@use '../../variables'as*;
+@use '../../extends'as*;
+
+.about {
+    position: relative;
+
+    &__icon {
+        @extend %bgIcon;
+    }
+}
+
+.test {
+    border: 3px solid black;
+}

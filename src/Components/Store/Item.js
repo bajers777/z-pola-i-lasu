@@ -10,15 +10,26 @@ const Item = props => {
             <Card>
                 <div className="card__img">
                     <Card.Img src={img} alt={name} />
-                    <Button variant="primary">Dodaj do koszyka <FontAwesomeIcon icon={solid('basket-shopping')} size='sm' color='#f1e4e4' /></Button>
                 </div>
                 <Card.Body className='d-flex flex-column justify-content-center align-items-center'>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>{cap}</Card.Text>
-                    <Card.Text>Cena: {price} zł.</Card.Text>
-                    {/* <Card.Text>
-                    {shortDesc}
-                </Card.Text> */}
+                    <Button>
+                        <FontAwesomeIcon className='mx-2' size='3x' icon={solid('circle-plus')} color='#10BC58' />
+                    </Button>
+                    <Card.Title>
+                        <b>
+                            {name}
+                        </b>
+                    </Card.Title>
+                    <Card.Text className='card-text--price'>
+                        <b>
+                            {price} zł.
+                        </b>
+                    </Card.Text>
+                    <Card.Text>
+                        <i>
+                            {cap}
+                        </i>
+                    </Card.Text>
                 </Card.Body>
             </Card>
         </Col>

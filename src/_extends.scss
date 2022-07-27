@@ -3,3 +3,13 @@
     align-items: center;
     justify-content: center;
 }
+
+%bgIcon {
+    position: absolute;
+    width: min(25%, 120px);
+    z-index: -1;
+
+    img {
+        width: 100%;
+    }
+}

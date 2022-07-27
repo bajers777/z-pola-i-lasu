@@ -14,7 +14,7 @@ const ItemList = () => {
 
     return (
         <Container >
-            <Row sm={2} md={3} xl={4} px={5}>
+            <Row sm={2} md={3} xl={5} px={5} className='text-center'>
                 {
                     productList.map(item => <Item
                         key={item.name + item.stock}

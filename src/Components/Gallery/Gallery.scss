@@ -1,3 +1,5 @@
+@use '../../variables'as*;
+
 .gallery {
     height: 85vh;
     overflow: hidden;
@@ -8,8 +10,8 @@
         background-repeat: no-repeat;
         background-size: 300px;
         background-position: bottom -25% left;
-        background-color: #95D5B2;
-        color: #081C15;
+        background-color: $c-background-secondary;
+        color: $c-third;
 
         .carousel-inner {
             height: 100%;
@@ -23,7 +25,7 @@
     &__container {
         position: relative;
         height: 100%;
-
+        width: 100%;
         // width: 200vw;
     }
 
