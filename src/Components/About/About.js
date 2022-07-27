@@ -38,46 +38,72 @@ const About = () => {
                     </Col>
                 </Row>
                 {/* </Col> */}
+            </Container>
 
-                <Row className='flex-row justify-content-center align-items-stretch mb-5'>
-                    <Col md={3} className='d-flex flex-column justify-content-center align-items-stretch text-center text-md-end'>
-                        <p className='d-flex flex-column '>
-                            <b>Z POLA I LASU </b>
+            <Container fluid>
+                <Row className='justify-content-center align-items-stretch g-0'>
+                    <Col md={3} className='justify-content-center align-items-stretch text-center text-md-end'>
+                        <b>Z POLA I LASU </b>
+                        <p>
                             Gospodarstwo powstało z zamiłowania do tego co zdrowe i smaczne. W naszej ofercie znajdują się syropy owocowe i ziołowe, soki bezcukrowe oraz konfitury. Wszystkie produkty oparte są na tradycyjnych recepturach.
 
                         </p>
-
-                        <p className='d-flex flex-column '>
-                            <b>NASZA PLANTACJA</b>
-                            Plantacja znajduje się w Kazimierskim Parku Krajobrazowym. Na tych malowniczych terenach, wśród wąwozów lessowych, prowadzimy rodzinne gospodarstwo ekologiczne.
-                        </p>
-
-                        <p className='d-flex flex-column '>
-                            <b>EKO PRODUKCJA</b>
-                            Do produkcji wykorzystujemy owoce i zioła z własnego gospodarstwa. Nie stosujemy sztucznych konserwantów, chemicznych aromatów, czy barwników. Ufamy przyrodzie i na niej się opieramy. W naszych ręcznie wykonanych produktach ukryliśmy aromaty i smaki natury.
-                        </p>
-
                     </Col>
+
                     <Col md={3} className="d-flex justify-content-center align-items-center flex-column about__logos">
                         <img className='img-fluid' src={EuroEko} style={imgStyle} alt="Logo produkcji ekologicznej EU" />
-                        <img src={PolskaSmakuje} style={imgStyle} alt="Logo Polska Smakuje" />
-                        <img src={ProduktLokalny} style={imgStyle} alt="Logo Produkt Lokalny" />
                     </Col>
-                    <Col md={3} className='d-flex flex-column justify-content-stretch text-center text-md-start'>
-                        <p className='d-flex flex-column'>
-                            <b>PRODUKTY</b>
+
+                    <Col md={3} className='justify-content-stretch text-center text-md-start'>
+                        <b>PRODUKTY</b>
+                        <p>
                             Wszystkie produkty oparte są na tradycyjnych recepturach. Do produkcji wykorzystujemy owoce i zioła z własnego gospodarstwa.
                         </p>
-                        <p className='d-flex flex-column'>
-                            <b>ZDROWIE</b>
+                    </Col>
+                </Row>
+
+                <Row className='justify-content-center align-items-stretch g-0'>
+                    <Col md={3} className='justify-content-center align-items-stretch text-center text-md-end'>
+
+                        <b>NASZA PLANTACJA</b>
+                        <p>
+                            Plantacja znajduje się w Kazimierskim Parku Krajobrazowym. Na tych malowniczych terenach, wśród wąwozów lessowych, prowadzimy rodzinne gospodarstwo ekologiczne.
+                        </p>
+                    </Col>
+
+                    <Col md={3} className="d-flex justify-content-center align-items-center about__logos">
+                        <img src={PolskaSmakuje} style={imgStyle} alt="Logo Polska Smakuje" />
+                    </Col>
+
+                    <Col md={3} className='justify-content-stretch text-center text-md-start'>
+                        <b>ZDROWIE</b>
+                        <p>
                             Nie stosujemy sztucznych konserwantów, chemicznych aromatów, czy barwników. Ufamy przyrodzie i na niej się opieramy.
                         </p>
-                        <p className='d-flex flex-column'>
-                            <b>RĘKODZIEŁO</b>
+                    </Col>
+
+                </Row>
+
+                <Row className='justify-content-center align-items-stretch g-0'>
+                    <Col md={3} className='justify-content-center align-items-stretch text-center text-md-end'>
+                        <b>EKO PRODUKCJA</b>
+                        <p>
+                            Do produkcji wykorzystujemy owoce i zioła z własnego gospodarstwa. Nie stosujemy sztucznych konserwantów, chemicznych aromatów, czy barwników. Ufamy przyrodzie i na niej się opieramy. W naszych ręcznie wykonanych produktach ukryliśmy aromaty i smaki natury.
+                        </p>
+                    </Col>
+
+                    <Col md={3} className="d-flex justify-content-center align-items-center about__logos">
+                        <img src={ProduktLokalny} style={imgStyle} alt="Logo Produkt Lokalny" />
+                    </Col>
+
+                    <Col md={3} className='justify-content-stretch text-center text-md-start'>
+                        <b>RĘKODZIEŁO</b>
+                        <p>
                             Poza produktami spożywczymi oferujemy szeroką gamę ręcznie wykonanych bieżników, kosmetyczek, poduszek, i innych. Do ich produkcji wykorzystujemy jedynie naturalne, wysokiej jakości materiały.
                         </p>
                     </Col>
                 </Row>
+
             </Container>
         </section>
     )
