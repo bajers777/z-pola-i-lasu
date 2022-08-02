@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
+
+
 import ItemList from './ItemList';
 import './Store.scss';
 

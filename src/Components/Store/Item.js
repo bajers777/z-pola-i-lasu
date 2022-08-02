@@ -2,11 +2,14 @@ import React from 'react';
 import { Col, Card, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Item = props => {
     const { name, price, cap, stock, shortDesc, longDesc, img } = props;
+
     return (
-        <Col className='store__item'>
+        <Col data-aos='zoom-in' className='store__item'>
             <Card>
                 <div className="card__img">
                     <Card.Img src={img} alt={name} />
@@ -16,9 +19,9 @@ const Item = props => {
                         <FontAwesomeIcon className='mx-2' size='3x' icon={solid('circle-plus')} color='#10BC58' />
                     </Button>
                     <Card.Title>
-                        <b>
+                        <p style={{ fontSize: '1rem' }}>
                             {name}
-                        </b>
+                        </p>
                     </Card.Title>
                     <Card.Text className='card-text--price'>
                         <b>

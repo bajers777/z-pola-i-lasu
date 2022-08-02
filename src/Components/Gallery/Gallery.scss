@@ -5,11 +5,12 @@
     overflow: hidden;
 
     &__slider {
+        position: relative;
         height: 70%;
-        background-image: url('../../Assets/Images/natural-product.png');
-        background-repeat: no-repeat;
-        background-size: 300px;
-        background-position: bottom -25% left;
+        // background-image: url('../../Assets/Images/natural-product.png');
+        // background-repeat: no-repeat;
+        // background-size: 300px;
+        // background-position: bottom -25% left;
         background-color: $c-background-secondary;
         color: $c-third;
 
@@ -19,6 +20,14 @@
 
         &--item {
             padding: 0 10rem;
+        }
+
+        img {
+            top: 50%;
+            left: 0;
+            position: absolute;
+            width: 15rem;
+            height: 15rem;
         }
     }
 

@@ -1,14 +1,16 @@
-footer {
+@use '../../variables'as*;
+@use '../../extends'as*;
+
+.footer {
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
     height: 50vh;
-    background-image: url('../../Assets/Images/slider-bg-vert.png');
-    background-repeat: no-repeat;
-    background-color: #95d5b2;
+    background-color: $c-primary;
+    color: $c-background-secondary;
 
-    .footer__contact {
+    &__contact {
         display: flex;
         flex-flow: row;
 
@@ -19,6 +21,12 @@ footer {
 
         ul {
             list-style: none;
+        }
+    }
+
+    &__social {
+        svg {
+            padding: .75rem;
         }
     }
 

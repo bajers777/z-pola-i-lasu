@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 //assets
 import EuroEko from '../../Assets/Images/euro_eko.jpg';
 import PolskaSmakuje from '../../Assets/Images/polska_smakuje.jpg';
@@ -10,6 +12,13 @@ const About = () => {
     const imgStyle = {
         width: '150px'
     }
+    useEffect(() => {
+        Aos.init({
+            duration: 500,
+            once: true
+        });
+    }, [])
+
     return (
         <section className='about'>
             <Container fluid>
@@ -27,7 +36,7 @@ const About = () => {
                         <hr />
                     </Col>
                 </Row>
-                <Row className='text-center justify-content-center'>
+                <Row data-aos='zoom-in' className='text-center justify-content-center'>
                     <Col sm={10}>
                         <h2>
                             Ekologiczna plantacja i naturalne domowe przetwory
@@ -41,7 +50,7 @@ const About = () => {
             </Container>
 
             <Container fluid>
-                <Row className='justify-content-center align-items-stretch g-0'>
+                <Row data-aos='fade-up' className='justify-content-center align-items-stretch g-0'>
                     <Col md={3} className='justify-content-center align-items-stretch text-center text-md-end'>
                         <b>Z POLA I LASU </b>
                         <p>
@@ -62,7 +71,7 @@ const About = () => {
                     </Col>
                 </Row>
 
-                <Row className='justify-content-center align-items-stretch g-0'>
+                <Row data-aos='fade-up' className='justify-content-center align-items-stretch g-0'>
                     <Col md={3} className='justify-content-center align-items-stretch text-center text-md-end'>
 
                         <b>NASZA PLANTACJA</b>
@@ -84,7 +93,7 @@ const About = () => {
 
                 </Row>
 
-                <Row className='justify-content-center align-items-stretch g-0'>
+                <Row data-aos='fade-up' className='justify-content-center align-items-stretch g-0'>
                     <Col md={3} className='justify-content-center align-items-stretch text-center text-md-end'>
                         <b>EKO PRODUKCJA</b>
                         <p>
