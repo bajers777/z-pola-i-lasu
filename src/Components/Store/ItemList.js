@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { CartContext } from '../../Context/CartProvider';
 import { CardGroup, Container, Row } from 'react-bootstrap';
 import Item from './Item';
 
 
 const ItemList = () => {
     const [productList, setProductList] = useState([]);
+
+    const CartCtx = useContext(CartContext);
 
     useEffect(() => {
         fetch('http://localhost:8888/products').then(res => res.json()).then(data => {
@@ -25,6 +28,8 @@ const ItemList = () => {
                         shortDesc={item.shortDesc}
                         longDesc={item.longDesc}
                         img={item.img}
+                        setCartItems={CartCtx.setCartItems}
+                        cartItems={CartCtx.cartItems}
                     />)
                 }
             </Row>

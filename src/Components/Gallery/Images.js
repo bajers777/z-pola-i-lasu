@@ -45,8 +45,6 @@ const Images = () => {
     }, []);
 
 
-
-    console.log('test');
     return (
         <div ref={imagesContainer} className='gallery__container'>
             <div onMouseDown={handleOnClick} onMouseUp={handleOnMouseUp} onMouseMove={handleCarouselMove} ref={imagesRow} className='gallery__images'>

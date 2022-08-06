@@ -7,17 +7,20 @@ import About from './Components/About/About';
 import Store from './Components/Store/Store';
 import Gallery from './Components/Gallery/Gallery';
 import Footer from './Components/Footer/Footer';
+import CartProvider from './Context/CartProvider';
 //style
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <About />
-      <Store />
-      <Gallery />
-      <Footer />
+      <CartProvider>
+        <Header />
+        <About />
+        <Store />
+        <Gallery />
+        <Footer />
+      </CartProvider>
     </div>
   );
 }

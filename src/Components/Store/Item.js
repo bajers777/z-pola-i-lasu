@@ -6,8 +6,17 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 const Item = props => {
-    const { name, price, cap, stock, shortDesc, longDesc, img } = props;
+    const { name, price, cap, stock, shortDesc, longDesc, img, setCartItems, cartItems } = props;
 
+    const handleButtonOnClick = e => {
+        let newCartItem = { name, price, count: 1 };
+        const newCartItems = cartItems;
+        const isInCart = newCartItems.some(el => el.name === newCartItem.name);
+        const index = newCartItems.findIndex(el => el.name === newCartItem.name);
+        isInCart ? newCartItems[index].count += 1 : newCartItems.push(newCartItem);
+
+        return setCartItems(newCartItems);
+    }
     return (
         <Col data-aos='zoom-in' className='store__item'>
             <Card>
@@ -15,7 +24,7 @@ const Item = props => {
                     <Card.Img src={img} alt={name} />
                 </div>
                 <Card.Body className='d-flex flex-column justify-content-center align-items-center'>
-                    <Button>
+                    <Button onClick={handleButtonOnClick}>
                         <FontAwesomeIcon className='mx-2' size='3x' icon={solid('circle-plus')} color='#10BC58' />
                     </Button>
                     <Card.Title>

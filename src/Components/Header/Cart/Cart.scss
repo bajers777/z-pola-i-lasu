@@ -1,0 +1,12 @@
+@use '../../../variables'as *;
+
+.cart {
+    &__body {
+        position: absolute;
+        top: 25vh;
+        left: 10%;
+        background-color: $c-text-secondary;
+        width: 80vw;
+        height: 50vh;
+    }
+}
