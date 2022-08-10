@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CartContext } from '../../../Context/CartProvider';
 //assets
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,23 +9,28 @@ import CartBody from './CartBody';
 import './Cart.scss';
 
 const Cart = props => {
+    const [isContactVisible, setContactVisible] = useState(false);
+    const { isCartVisible, setCartVisible } = useContext(CartContext);
 
-    const CartCtx = useContext(CartContext);
-    const { isCartVisible, setCartVisible, cartItems } = CartCtx;
+    const handleButtonOnClick = e => {
+        const type = e.currentTarget.getAttribute('data-type');
+        if (type === 'cart') {
+            return setCartVisible(visibility => !visibility);
+        } else if (type === 'contact') {
+            setContactVisible(visibility => !visibility)
+        }
 
-    const handleButtonOnClick = () => {
-        return setCartVisible(prevState => !prevState);
     }
+
     return (
         <>
-            <span className='d-md-none navbar__icon'>
+            <span data-type='contact' onClick={handleButtonOnClick} className='d-md-none navbar__icon'>
                 <FontAwesomeIcon icon={solid('phone')} color='#064420' />
             </span>
-            <button onClick={handleButtonOnClick} className='navbar__icon'>
-
+            <button onClick={handleButtonOnClick} data-type='cart' className={isCartVisible ? 'cart__icon--toggle' : 'navbar__icon'}>
                 <FontAwesomeIcon icon={solid('cart-shopping')} color='#064420' />
             </button>
-            {isCartVisible && <CartBody cartItems={cartItems} />}
+            {isCartVisible && <CartBody />}
         </>
     )
 }
