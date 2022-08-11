@@ -3,14 +3,13 @@ import React from 'react';
 import { Col, Container, Navbar, NavbarBrand, Row } from 'react-bootstrap';
 //components
 import Contact from './Contact';
-import Cart from '../Cart/Cart';
+import Icons from '../Icons/Icons';
 //assets
 import Logo from '../../../Assets/Images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { brands, solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 const Nav = () => {
-    const clientWidth = document.body.clientWidth;
 
     return (
         <Navbar className='navbar'>
@@ -19,10 +18,10 @@ const Nav = () => {
                 </Col>
 
                 <Col md='4'>
-                    <Contact clientWidth={clientWidth} />
+                    <Contact />
                 </Col>
                 <Col className='cart' md='2'>
-                    <Cart clientWidth={clientWidth} />
+                    <Icons />
                 </Col>
             </Container>
         </Navbar>

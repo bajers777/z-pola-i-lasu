@@ -2,38 +2,39 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { brands, solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { Col, Container, Navbar, NavbarBrand, Row } from 'react-bootstrap';
-const Contact = () => {
+const Contact = props => {
     return (
         <>
 
-            <div className='d-none d-md-flex navbar__contact'>
+            <div className={`${props.isVisible ? 'navbar__contact--sm' : 'd-none'} d-md-flex navbar__contact`}>
                 <div className='navbar__contact--row'>
                     <div className='navbar__contact--item'>
                         Grzegorz Szymanek
                     </div>
-                    <div className='navbar__contact--item'>
+                    <div className={`navbar__contact--item ${props.isVisible && 'navbar__contact--visible'}`}>
                         <span>
-                            <FontAwesomeIcon icon={solid('phone')} size='xs' color='#064420' /> 798 488 333
+                            <FontAwesomeIcon className='navbar__contact--icon' icon={solid('phone')} size='xs' color='#064420' />
+                            798 488 333
                         </span>
                         <span>
-                            <FontAwesomeIcon icon={solid('envelope')} size='xs' color='#064420' />
+                            <FontAwesomeIcon className='navbar__contact--icon' icon={solid('envelope')} size='xs' color='#064420' />
+                            kontakt@zpolailasu.pl
                         </span>
-                        kontakt@zpolailasu.pl
                     </div>
                 </div>
                 <div className='navbar__contact--row'>
                     <div className='navbar__contact--item'>
                         Justyna Szymanek
                     </div>
-                    <div className='navbar__contact--item'>
-
+                    <div className={`navbar__contact--item ${props.isVisible && 'navbar__contact--visible'}`}>
                         <span>
-                            <FontAwesomeIcon icon={solid('phone')} size='xs' color='#064420' /> 517 468 801
+                            <FontAwesomeIcon className='navbar__contact--icon' icon={solid('phone')} size='xs' color='#064420' />
+                            517 468 801
                         </span>
                         <span>
-                            <FontAwesomeIcon icon={solid('envelope')} size='xs' color='#064420' />
+                            <FontAwesomeIcon className='navbar__contact--icon' icon={solid('envelope')} size='xs' color='#064420' />
+                            dzioskaj@krzewy.net.pl
                         </span>
-                        dzioskaj@krzewy.net.pl
                     </div>
                 </div>
             </div>
