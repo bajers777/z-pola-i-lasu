@@ -11,13 +11,14 @@ const ItemList = () => {
 
     useEffect(() => {
         fetch('http://localhost:8888/products').then(res => res.json()).then(data => {
+            console.log(data);
             setProductList(data);
         });
     }, []);
 
     return (
-        <Container >
-            <Row sm={2} md={3} xl={5} px={5} className='text-center'>
+        <Container>
+            <Row px={5} className='text-center justify-content-center justify-content-sm-start'>
                 {
                     productList.map(item => <Item
                         key={item.name + item.stock}
@@ -28,8 +29,11 @@ const ItemList = () => {
                         shortDesc={item.shortDesc}
                         longDesc={item.longDesc}
                         img={item.img}
+                        thumbnail={item.thumbnail}
                         setCartItems={CartCtx.setCartItems}
                         cartItems={CartCtx.cartItems}
+                        isCartVisible={CartCtx.isCartVisibe}
+                        setCartVisible={CartCtx.setCartVisible}
                     />)
                 }
             </Row>

@@ -1,0 +1,37 @@
+@use '../../../variables'as *;
+
+.product-info {
+    margin-top: min(800px, 5%);
+
+    &__img,
+    &__desc {
+        max-height: 50vh;
+    }
+
+    &__desc {
+        border: 1px solid black;
+
+        &--long {
+            font-size: .75rem;
+            white-space: pre-line;
+        }
+    }
+
+    &__img {
+        border-right: 1px solid $c-primary;
+
+        img {
+            // width: 25%;
+            min-height: 100%;
+        }
+    }
+
+    &__icons {
+        padding-bottom: 1.5rem;
+
+        .btn {
+            background-color: transparent;
+            border: none;
+        }
+    }
+}

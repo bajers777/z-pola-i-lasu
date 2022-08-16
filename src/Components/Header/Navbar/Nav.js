@@ -1,28 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 //bootstrap
 import { Col, Container, Navbar, NavbarBrand, Row } from 'react-bootstrap';
 //components
 import Contact from './Contact';
 import Icons from '../Icons/Icons';
-//assets
-import Logo from '../../../Assets/Images/logo.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { brands, solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
-const Nav = () => {
-
+const Nav = ({ checkout }) => {
+    console.log(checkout);
     return (
         <Navbar className='navbar'>
             <Container fluid>
-                <Col className='navbar__brand' sm='2'>
-                </Col>
-
+                <Link to='/'>
+                    <Col className='navbar__brand' sm='2' />
+                </Link>
                 <Col md='4'>
-                    <Contact />
+                    <Contact checkout={checkout} />
                 </Col>
-                <Col className='cart' md='2'>
-                    <Icons />
-                </Col>
+                {!checkout &&
+                    <Col className='cart' md='2'>
+                        <Icons />
+                    </Col>
+                }
             </Container>
         </Navbar>
     )

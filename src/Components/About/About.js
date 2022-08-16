@@ -15,7 +15,7 @@ const About = () => {
     useEffect(() => {
         Aos.init({
             duration: 500,
-            once: true
+            once: false
         });
     }, [])
 
@@ -26,7 +26,6 @@ const About = () => {
                     <Col sm={3}>
                         <hr />
                     </Col>
-                    {/* <Col className='d-flex flex-column justify-content-center align-items-center'> */}
                     <Col sm={4}>
                         <h1>
                             Z Pola i Lasu

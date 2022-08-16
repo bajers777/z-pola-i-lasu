@@ -12,31 +12,48 @@
         z-index: 2;
 
         .card {
-            height: 25rem;
-            border-radius: 1rem;
+            height: 22rem;
+            width: 70%;
+            border-radius: .15rem;
             text-align: left;
+            // box-shadow: 0px 0px 15px 1px $c-secondary;
+            transition: all .2s ease-in;
+
+            &:hover {
+
+                box-shadow: 0px 0px 20px 3px $c-secondary;
+            }
 
             &__img {
                 display: flex;
-                height: 65%;
+                position: relative;
+                height: 50%;
 
                 &:hover {
-                    background-color: rgba(0, 0, 0, 0.1);
 
-                    // img {
-                    //     opacity: 0.8;
-                    // }
-
-                    // .btn {
-                    //     opacity: 1;
-                    // }
+                    .btn {
+                        opacity: 1;
+                    }
                 }
 
                 img {
                     display: block;
-                    border-radius: 1rem 1rem 0 0;
+                    border-radius: .15rem .15rem 0 0;
+                    transition: .1s ease-in;
+
+                }
+
+                .btn {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    background-color: #262626AA;
+                    border: none;
+                    outline: none;
                     transition: .1s ease-in;
                 }
+
 
             }
 
@@ -44,8 +61,8 @@
                 display: flex;
                 align-items: flex-start;
                 padding: 0;
-                width: 100%;
-                height: 100%;
+                width: 80%;
+                height: 50%;
             }
 
             &-text {
@@ -59,18 +76,23 @@
                     color: $c-background-secondary;
                     text-align: center;
                     background-color: $c-background;
-                    border-radius: .25rem;
+                    border-radius: .15rem;
                 }
 
-                i {
-                    font-size: .85rem;
+                &--cap {
+                    margin-top: 0;
+
+                    i {
+                        font-size: .85rem;
+                    }
                 }
             }
 
             &-body {
+
                 .btn {
                     position: absolute;
-                    top: 50%;
+                    top: 35%;
                     right: 0;
                     // bottom: 0%;
                     transform: translate(50%, 50%);
@@ -96,11 +118,6 @@
                     }
 
                 }
-            }
-
-            &-body {
-                height: 35%;
-
             }
         }
     }

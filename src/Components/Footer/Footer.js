@@ -9,7 +9,7 @@ import Logo from '../../Assets/Images/logo.png';
 const Footer = () => {
     return (
         <footer className='footer'>
-            <div className="footer__contact">
+            <div className="footer__contact flex-column flex-sm-row">
                 <img src={Logo} alt="" />
                 <ul>
                     <li><b>Kontakt</b></li>

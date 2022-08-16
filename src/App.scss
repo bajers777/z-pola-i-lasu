@@ -1,5 +1,7 @@
 @use './variables'as *;
 
 .App {
+    box-sizing: border-box;
+    overflow-x: hidden;
     font-family: $f-primary;
 }

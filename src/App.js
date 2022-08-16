@@ -8,19 +8,19 @@ import Store from './Components/Store/Store';
 import Gallery from './Components/Gallery/Gallery';
 import Footer from './Components/Footer/Footer';
 import CartProvider from './Context/CartProvider';
+//React Router
 //style
 import './App.scss';
+import ProductInfo from './Components/Store/ProductInfo/ProductInfo';
 
 function App() {
   return (
     <div className="App">
-      <CartProvider>
-        <Header />
-        <About />
-        <Store />
-        <Gallery />
-        <Footer />
-      </CartProvider>
+      <Header />
+      <About />
+      <Store />
+      <Gallery />
+      <Footer />
     </div>
   );
 }
